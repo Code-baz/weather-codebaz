@@ -1,20 +1,36 @@
 import 'package:flutter/material.dart';
 
-class LoadingScreen extends StatefulWidget {
+class LoadingScreen extends StatelessWidget {
   const LoadingScreen({Key? key}) : super(key: key);
 
   @override
-  State<LoadingScreen> createState() => _LoadingScreenState();
-}
-
-class _LoadingScreenState extends State<LoadingScreen> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {},
-          child: Text('Get Location'),
+      body: SafeArea(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Icon(
+                  Icons.location_on,
+                  size: 32,
+                ),
+                Icon(
+                  Icons.location_city,
+                  size: 32,
+                )
+              ],
+            ),
+            Text('Your Location is: somewhere'),
+            Text(
+              'your weather is:\nsomething',
+              overflow: TextOverflow.clip,
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            )
+          ],
         ),
       ),
     );

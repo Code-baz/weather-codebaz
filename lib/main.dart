@@ -1,7 +1,4 @@
-import 'package:abohava_codebaz/screens/city_screen.dart';
-import 'package:abohava_codebaz/screens/location_screen.dart';
 import 'package:flutter/material.dart';
-
 import 'screens/loading_screen.dart';
 
 void main() {
@@ -20,7 +17,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark(),
-      home: LocationScreen(),
+      home: LoadingScreen(),
     );
   }
 }
